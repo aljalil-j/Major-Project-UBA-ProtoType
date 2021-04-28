@@ -63,7 +63,9 @@ namespace Major_Project_UBA_ProtoType.Controllers
         {
             return View();
         }
-        
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

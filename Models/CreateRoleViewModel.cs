@@ -8,7 +8,8 @@ namespace Major_Project_UBA_ProtoType.Models
 {
     public class CreateRoleViewModel
     {
-        [System.ComponentModel.DataAnnotations.Required]
+        [Required]
+        [Display(Name = "Role")]
         public string RoleName { get; set; }
     }
 }

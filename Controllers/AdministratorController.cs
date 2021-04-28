@@ -10,7 +10,7 @@ using Major_Project_UBA_ProtoType.Models;
 
 namespace Major_Project_UBA_ProtoType.Controllers
 {
-   // [Authorize(Roles = "Admin")]
+    // [Authorize(Roles = "Admin")]
     public class AdministratorController : Controller
     {
 
@@ -278,5 +278,16 @@ namespace Major_Project_UBA_ProtoType.Controllers
 
 
         }
+
+        public class Customer
+        {
+            internal string UserName;
+            internal string Id;
+        }
+    }
+
+    public class DeleteRoleViewModel
+    {
+        public string Id { get; internal set; }
     }
 }
