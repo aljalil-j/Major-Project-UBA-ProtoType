@@ -23,10 +23,47 @@ namespace Major_Project_UBA_ProtoType.Controllers
             return View();
         }
 
+
         public IActionResult Privacy()
         {
             return View();
         }
+
+        public IActionResult Admins()
+        {
+            return View();
+        }
+
+        public IActionResult data()
+        {
+            return View();
+        }
+
+        public IActionResult cases()
+        {
+            return View();
+        }
+
+        public IActionResult settings()
+        {
+            return View();
+        }
+
+        public IActionResult modeling()
+        {
+            return View();
+        }
+
+        public IActionResult anamolies()
+        {
+            return View();
+        }
+
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

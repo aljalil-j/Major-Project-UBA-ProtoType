@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityRole>
+
+
+
+<title>  All Roles</title>
+
+
+<hi>All Roles</hi>
+
+@if (Model.Any())
+{
+    foreach (var role in Model)
+    {
+
+        
+            <div class="card mb-3">
+                <div class="card-header">
+                    Role Id:@role.Id
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Role Name: @role.Name</h5>
+                        </div>
+                    <div class="card-footer">
+                        <form asp-action="DeleteRole" asp-route-id="@role.Id" method="post">
+                            <a class="btn btn-primary" asp-action="EditRole"
+                               asp-controller="Adminstration" asp-route-id="@role.Id">Edit</a>
+
+
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       
+
+    }
+
+}
+@section scripts{ 
+<script src="~/js/CustomScript.js"></script>
+}
