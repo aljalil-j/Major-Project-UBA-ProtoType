@@ -9,13 +9,13 @@ using Major_Project_UBA_ProtoType.Models;
 
 namespace Major_Project_UBA_ProtoType.Controllers
     {
-        [Authorize(Roles = "Admin")]
+       // [Authorize(Roles = "Admin")]
         public class AdminController : Controller
         {
             private readonly RoleManager<IdentityRole> roleManager;
-            private readonly UserManager<Customer> userManager;
+            private readonly UserManager<IdentityUser> userManager;
 
-            public AdminController(RoleManager<IdentityRole> roleManager, UserManager<Customer> userManager)
+            public AdminController(RoleManager<IdentityRole> roleManager, UserManager<IdentityUser> userManager)
             {
                 this.roleManager = roleManager;
                 this.userManager = userManager;
@@ -54,7 +54,7 @@ namespace Major_Project_UBA_ProtoType.Controllers
 
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("index", "home");
+                        return RedirectToAction("Admin", "home");
                     }
 
                     foreach (IdentityError error in result.Errors)
