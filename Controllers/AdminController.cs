@@ -33,10 +33,7 @@ namespace Major_Project_UBA_ProtoType.Controllers
                 return View();
             }
 
-            public IActionResult ManageUsers()
-            {
-                return View();
-            }
+          
 
             [HttpPost]
             public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
@@ -244,7 +241,7 @@ namespace Major_Project_UBA_ProtoType.Controllers
             }
 
             [HttpGet]
-            public IActionResult ListUsers()
+            public IActionResult ManageUsers()
             {
                 var result = userManager.Users;
                 return View(result);
