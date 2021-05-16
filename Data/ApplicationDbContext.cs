@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Major_Project_UBA_ProtoType.Models;
 
 namespace Major_Project_UBA_ProtoType.Data
 {
@@ -12,5 +13,6 @@ namespace Major_Project_UBA_ProtoType.Data
             : base(options)
         {
         }
+        public DbSet<Major_Project_UBA_ProtoType.Models.DataModel> Data { get; set; }
     }
 }
