@@ -7,19 +7,32 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
+using Major_Project_UBA_ProtoType.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Major_Project_UBA_ProtoType.Controllers
 {
    
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context2;
+        //private readonly UserManager<Customer> userManager;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public HomeController(ApplicationDbContext context,  IHttpContextAccessor httpContextAccessor,
+           ApplicationDbContext context2)
         {
-            _logger = logger;
+            _context = context;
+           // this.userManager = userManager;
+            _httpContextAccessor = httpContextAccessor;
+            _context2 = context2;
         }
 
+       
         public IActionResult Index()
         {
             return View();
@@ -40,6 +53,11 @@ namespace Major_Project_UBA_ProtoType.Controllers
         {
             return View();
         }
+
+        /* public async Task<IActionResult> data()
+         {
+             return View(await _context.Data.ToListAsync());
+         }*/
 
         public IActionResult cases()
         {

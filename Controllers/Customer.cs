@@ -4,5 +4,6 @@
     {
         public string UserName { get; internal set; }
         public string Id { get; internal set; }
+        public object AccountNum { get; internal set; }
     }
 }
