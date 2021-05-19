@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Customer Transactions";
-    Layout = "~/Views/Shared/ScotiaLayout.cshtml";
+    
 }
 
 <h1>Customer Transactions</h1>
@@ -29,7 +29,7 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody>
+        @*<tbody>
             @foreach (var item in Model)
             {
             <tr>
@@ -55,7 +55,7 @@
                 </td>
             </tr>
             }
-        </tbody>
+        </tbody>*@
     </table>
 }
 else
