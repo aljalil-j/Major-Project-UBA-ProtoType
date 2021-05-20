@@ -19,17 +19,13 @@ namespace Major_Project_UBA_ProtoType.Controllers
     {
 
         private readonly ApplicationDbContext _context;
-        private readonly ApplicationDbContext _context2;
-        //private readonly UserManager<Customer> userManager;
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public HomeController(ApplicationDbContext context,  IHttpContextAccessor httpContextAccessor,
-           ApplicationDbContext context2)
+        public HomeController(ApplicationDbContext context,  IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
-           // this.userManager = userManager;
             _httpContextAccessor = httpContextAccessor;
-            _context2 = context2;
+           
         }
 
        
@@ -49,15 +45,28 @@ namespace Major_Project_UBA_ProtoType.Controllers
             return View();
         }
 
-        public IActionResult data()
+        // GET: Data/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var @data = await _context.Transaction
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (@data == null)
+            {
+                return NotFound();
+            }
+
+            return View(@data);
         }
 
-        /* public async Task<IActionResult> data()
+        public async Task<IActionResult> data()
          {
-             return View(await _context.Data.ToListAsync());
-         }*/
+             return View(await _context.Transaction.ToListAsync());
+         }
 
         public IActionResult cases()
         {

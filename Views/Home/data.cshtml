@@ -12,6 +12,9 @@
         <thead>
             <tr>
                 <th>
+                @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.StartDate)
                 </th>
                 <th>
@@ -29,33 +32,36 @@
                 <th></th>
             </tr>
         </thead>
-        @*<tbody>
+       <tbody>
             @foreach (var item in Model)
             {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StartDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AccountNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TransactionType)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Amount)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Location)
-                </td>
-                <td>
-                    
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
-                   
-                </td>
-            </tr>
+           <tr>
+               <td>
+                   @Html.DisplayFor(modelItem => item.Id)
+               </td>
+               <td>
+                   @Html.DisplayFor(modelItem => item.StartDate)
+               </td>
+               <td>
+                   @Html.DisplayFor(modelItem => item.AccountNumber)
+               </td>
+               <td>
+                   @Html.DisplayFor(modelItem => item.TransactionType)
+               </td>
+               <td>
+                   @Html.DisplayFor(modelItem => item.Amount)
+               </td>
+               <td>
+                   @Html.DisplayFor(modelItem => item.Location)
+               </td>
+               <td>
+
+                   <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+
+               </td>
+           </tr>
             }
-        </tbody>*@
+        </tbody>
     </table>
 
-@*}*@
+

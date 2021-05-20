@@ -14,5 +14,7 @@ namespace Major_Project_UBA_ProtoType.Data
         {
         }
         public DbSet<Major_Project_UBA_ProtoType.Models.DataModel> Data { get; set; }
+
+        public DbSet<Major_Project_UBA_ProtoType.Models.Transaction> Transaction { get; set; }
     }
 }

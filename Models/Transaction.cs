@@ -30,7 +30,7 @@ namespace Major_Project_UBA_ProtoType.Models
         public decimal Amount { get; set; }
 
         public string Location { get; set; }
-        public string item_purchase { get; set; }
+        public string Item_purchase { get; set; }
 
 
     }
