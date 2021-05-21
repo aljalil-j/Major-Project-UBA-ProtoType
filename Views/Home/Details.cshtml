@@ -10,24 +10,24 @@
     <h4>Data</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
+        <dd class="col-sm-10">
             @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dt class="col-sm-2">
+        </dd>
+        <dd class="col-sm-10">
             @Html.DisplayNameFor(model => model.StartDate)
-        </dt>
+        </dd>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.AccountNumber)
         </dd>
-        <dt class="col-sm-2">
+        <dd class="col-sm-10">
             @Html.DisplayNameFor(model => model.Amount)
-        </dt>
+        </dd>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TransactionType)
         </dd>
-        <dt class="col-sm-2">
+        <dd class="col-sm-10">
             @Html.DisplayNameFor(model => model.Item_purchase)
-        </dt>
+        </dd>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Location)
         </dd>
@@ -38,5 +38,5 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="data">Back to List</a>
 </div>

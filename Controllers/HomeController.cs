@@ -63,12 +63,18 @@ namespace Major_Project_UBA_ProtoType.Controllers
             return View(@data);
         }
 
-        public async Task<IActionResult> data()
+        public async Task<IActionResult> data()   
          {
              return View(await _context.Transaction.ToListAsync());
          }
 
-        public IActionResult cases()
+    public async Task<IActionResult>Transaction()
+    {
+            return View(await _context.ScotiaTransaction.ToListAsync());
+        }
+
+
+    public IActionResult cases()
         {
             return View();
         }
