@@ -1,4 +1,33 @@
-﻿@model IEnumerable<Major_Project_UBA_ProtoType.Models.Transaction>
+﻿<style>
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: lightskyblue;
+            color: white;
+        }
+</style>
+
+@model IEnumerable<Major_Project_UBA_ProtoType.Models.Transaction>
 
 @{
     ViewData["Title"] = "Customer Transactions";
@@ -6,9 +35,8 @@
 }
 
 <h1>Customer Transactions</h1>
-@*@if (Model.Any())
-{*@
-    <table class="table">
+
+    <table id="customers">
         <thead>
             <tr>
                 <th>

@@ -65,8 +65,10 @@ namespace Major_Project_UBA_ProtoType.Controllers
 
         public async Task<IActionResult> data()   
          {
-             return View(await _context.Transaction.ToListAsync());
-         }
+            
+ 
+            return View(await _context.Transaction.ToListAsync());
+        }
 
     public async Task<IActionResult>Transaction()
     {
